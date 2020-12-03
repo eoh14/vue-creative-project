@@ -36,7 +36,7 @@ export default {
         async getStories() {
         try {
             let response = await axios.get("/api/stories");
-            this.astory = response.data.story;
+            this.astory = response.data.astory;
             return true;
         } catch (error) {
             console.log(error);
