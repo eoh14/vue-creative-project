@@ -21,7 +21,7 @@ const storiesSchema = new mongoose.Schema({
 });
 
 // create a model for tickets
-const Story = mongoose.model('Stories', storiesSchema);
+const Story = mongoose.model('stories', storiesSchema);
 
 
 app.get('/api/stories', async (req, res) => {
