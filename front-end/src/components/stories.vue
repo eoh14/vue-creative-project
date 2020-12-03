@@ -2,8 +2,8 @@
     
     <div> 
     <div class="container border my-2 p-3 text-center">
-        <h4>{{this.$root.$data.chosenStory}}</h4>
-        <h6 class="d-flex justify-content-center text-muted"> -- {{this.$root.$data.chosenAuthor}}</h6>
+        <h4>{{astory.story}}</h4>
+        <h6 class="d-flex justify-content-center text-muted"> -- {{astory.name}}</h6>
     </div>
         <button @click="getStories " id="goQuotes" class="btn btn-light"> Storytime? </button>
     <div>
