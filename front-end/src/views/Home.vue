@@ -17,29 +17,7 @@ export default {
   components:{
     Story
   },
-	// data() {
-	// 	return {
-	// 		quote : ""
-	// 	}
-	// },
-	// methods : {
-	// 	async getRandomQuote() {
-  //     var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-	// 		var apiUrl = proxyUrl + "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json&json=?"
-	// 		let response = await fetch(apiUrl)
-	// 		return await response.json()
-	// 	},
-	// 	async generateQuote() {
-	// 		var randomQuote = await this.getRandomQuote()
-	// 		if(randomQuote) {
-	// 			this.quote = randomQuote.shift()
-	// 		}
-	// 	}
-	// },
-	// mounted() {
-	// 	this.generateQuote()
-	// }
-  
+
 }
 
 </script>

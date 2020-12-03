@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Philosophy from '../views/Philosophy.vue'
+import SStories from '../views/SStories.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ const routes = [
     path: '/Philosophy',
     name: 'Philosophy',
     component: Philosophy
+  },
+  {
+    path: '/Stories',
+    name: 'Stories',
+    component: SStories
   }
 ]
 

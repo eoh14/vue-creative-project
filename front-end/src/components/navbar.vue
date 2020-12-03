@@ -17,17 +17,20 @@
                 <li class="nav-item">
                     <router-link class="nav-link" :to= "'Philosophy'">life philosophy </router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link class="nav-link" :to= "'Stories'">submit a story </router-link>
+                </li>
                 <li class="nav-item dropdown">
                     <router-link class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         dropdown
                     </router-link>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <router-link class="dropdown-item font-normal" href="contact.html">contact</router-link>
-                        <router-link class="dropdown-item font-normal" href="pricing.html">pricing</router-link>
+                        <router-link class="dropdown-item font-normal" href="pricing.html">pricing</router-link> -->
                         <!-- <div class="dropdown-divider"></div>
                                 <router-link class="dropdown-item" href="#">Something else here</router-link> -->
-                    </div>
+                    <!-- </div> -->
                 </li>
 
             </ul>
