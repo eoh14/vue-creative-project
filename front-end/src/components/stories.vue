@@ -36,7 +36,8 @@ export default {
         async getStories() {
         try {
             let response = await axios.get("/api/stories");
-            this.astory = response.data.story;
+            this.astory.story = response.data.astory.story;
+            this.astory.name = response.data.astory.name;
             // this.$root.$data.chosenStory = this.astory.story;
             // this.$root.$data.chosenAuthor = this.astory.name;
             return true;
