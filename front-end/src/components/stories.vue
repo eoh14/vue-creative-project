@@ -5,7 +5,7 @@
         <h4>{{astory.story}}</h4>
         <h6 class="d-flex justify-content-center text-muted"> -- {{astory.name}}</h6>
     </div>
-        <button @click="getStories " id="goQuotes" class="btn btn-light"> Storytime? </button>
+        <button @click="getStories()" id="goQuotes" class="btn btn-light"> Storytime? </button>
     <div>
         <i><small><p class="text-muted">have a story to tell? submit your 6 word story!</p></small></i>
     </div>
@@ -36,10 +36,9 @@ export default {
         async getStories() {
         try {
             let response = await axios.get("/api/stories");
-            this.astory.story = response.data.astory.story;
-            this.astory.name = response.data.astory.name;
-            // this.$root.$data.chosenStory = this.astory.story;
-            // this.$root.$data.chosenAuthor = this.astory.name;
+            this.astory = response.data.astory;
+            this.$root.$data.chosenStory = this.astory.story;
+            this.$root.$data.chosenAuthor = this.astory.name;
             return true;
         } catch (error) {
             console.log(error);
