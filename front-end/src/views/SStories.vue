@@ -12,8 +12,7 @@
           <br>
           <input v-model="name" placeholder="Your name">
           <p></p>
-          <button type="submit">Submit</button>
-
+          <button type="submit" class="btn btn-light">Submit</button>
         </form>
         <div v-else>
           <p>Thank you for submitting a story!</p>

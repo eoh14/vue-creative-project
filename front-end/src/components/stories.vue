@@ -1,7 +1,7 @@
 <template>
     
     <div> 
-    <div class="container border my-2 p-3 text-center">
+    <div class="container border my-2 p-3 text-center" v-if="isClicked">
         <h4>{{astory.story}}</h4>
         <h6 class="d-flex justify-content-center text-muted"> -- {{astory.name}}</h6>
     </div>
@@ -22,11 +22,13 @@ export default {
                 story:'',
                 name:'',
             },
+            isClicked: false,
         }
+
     },
-    created() {
-    this.getStories();
-    },
+    // created() {
+    // this.getStories();
+    // },
     methods:{
         // anotherStory(){
         // var chosenNumber = Math.floor(Math.random() * 6);
@@ -36,9 +38,12 @@ export default {
         async getStories() {
         try {
             let response = await axios.get("/api/stories");
-            this.astory = response.data.astory;
+            console.log(response); //weird behavior can't explain
+ //           console.log('story',response.data.story);
+            this.astory = response.data.story; //don't understand why it works
             this.$root.$data.chosenStory = this.astory.story;
-            this.$root.$data.chosenAuthor = this.astory.name;
+            this.$root.$data.chosenAuthor = this.astory.name
+            this.isClicked= true;
             return true;
         } catch (error) {
             console.log(error);

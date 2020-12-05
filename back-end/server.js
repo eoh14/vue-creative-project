@@ -30,7 +30,7 @@ app.get('/api/stories', async (req, res) => {
         var chosenNumber = Math.floor(Math.random() * stories.length);
         let story = stories[chosenNumber];
         res.send({
-            story: story //called in front end
+            story : story //called in front end
         });
     } catch (error) {
         console.log(error);
