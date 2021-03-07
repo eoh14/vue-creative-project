@@ -5,7 +5,7 @@
         <h4>{{astory.story}}</h4>
         <h6 class="d-flex justify-content-center text-muted"> -- {{astory.name}}</h6>
     </div>
-        <button @click="getStories()" id="goQuotes" class="btn btn-light"> Storytime? </button>
+        <button @click="getStories " id="goQuotes" class="btn btn-light"> Storytime? </button>
     <div>
         <i><small><p class="text-muted">have a story to tell? submit your 6 word story!</p></small></i>
     </div>
@@ -38,12 +38,19 @@ export default {
         async getStories() {
         try {
             let response = await axios.get("/api/stories");
+<<<<<<< HEAD
             console.log(response); //weird behavior can't explain
  //           console.log('story',response.data.story);
             this.astory = response.data.story; //don't understand why it works
             this.$root.$data.chosenStory = this.astory.story;
             this.$root.$data.chosenAuthor = this.astory.name
             this.isClicked= true;
+=======
+            this.astory.story = response.data.astory.story;
+            this.astory.name = response.data.astory.name;
+            // this.$root.$data.chosenStory = this.astory.story;
+            // this.$root.$data.chosenAuthor = this.astory.name;
+>>>>>>> parent of 0536a27... try again
             return true;
         } catch (error) {
             console.log(error);
